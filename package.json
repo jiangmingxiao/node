@@ -1,0 +1,10 @@
+{
+  "name": "jiangmx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jiangmxa <jiangmxa@chanjet.com>",
+  "license": "MIT",
+  "scripts": {
+    "start":"node app.js"
+  }
+}

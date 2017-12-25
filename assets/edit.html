@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React Tutorial</title>
+    <script src="/lib/react.js"></script>
+    <script src="/lib/react-dom.js"></script>
+    <script src="/lib/browser.min.js"></script>
+    <script src="/lib/jquery.min.js"></script>
+    <script src="/lib/marked.min.js"></script>
+    <style>
+   tr,td,th{
+      border: 1px solid;
+      padding:0;
+      margin:0;
+      }
+      th{
+        cursor: col-resize;
+      }
+      th>div{
+            padding: 3px;
+    margin: -1px 3px -1px -1px;
+    padding-left: 3px;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+      }
+      </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  <div id="mountNode"></div>
+    <script type="text/babel" src="./js/edit.js"></script>
+    <script type="text/babel">
+      
+    </script>
+<script>
+React.render(<input value="hi" />, mountNode);
+
+setTimeout(function() {
+  React.render(<input value={null} />, mountNode);
+}, 1000);
+</script>
+  </body>
+</html>
