@@ -1,4 +1,7 @@
-﻿var FilterableProductTable = React.createClass({
+﻿
+import {formatPrice1,formatPrice2} from "../lib/utils";
+
+var FilterableProductTable = React.createClass({
   data:[{"name":"jmx","id":"1","sex":"男","age":1},
     {"name":"jmx1","id":"2","sex":"男","age":2},
     {"name":"jmx2","id":"3","sex":"男","age":3},
@@ -55,45 +58,8 @@
     );
   }
 });
-var b = (str) => {
-  const len = str.length;
-  const array=[];
-  if(len <= 3){
-    return str
-  }
-  let index = len % 3;
-  for(let i=index,j=0;i<len;i++){
 
-    array.push(str[i])
-  }
-}
-var a = (str)=>{
-  let len = str.length;
-  if(len <= 3){
-    return str
-  }
-  
-  let index = len % 3;
-  if(index>0) {
-    str = str.substr(0,index)+","+str.substr(index);
-    index++;
-    len++;
-  }
-  
-  for(let i=index,j = 0;i<len;i++){
-
-    if( j%3 === 0 && j!==0) {
-      str = str.substr(0,i)+","+str.substr(i);
-      i++;
-      len++;
-    }
-    j++;
-    
-    
-  }
-  return str;
-}
-console.log("testData",a("1234567890"))
+console.log("testData",formatPrice1("1234567890"))
 var Pagination=React.createClass({
   getInitialState : function(){
     return {

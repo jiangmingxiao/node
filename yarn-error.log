@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn init
+  /usr/local/bin/node /usr/local/bin/yarn add babel
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -19,7 +19,10 @@ npm manifest:
     "version": "1.0.0",
     "main": "index.js",
     "author": "jiangmxa <jiangmxa@chanjet.com>",
-    "license": "MIT"
+    "license": "MIT",
+    "scripts": {
+      "start":"node app.js"
+    }
   }
 
 yarn manifest: 
@@ -29,14 +32,4 @@ Lockfile:
   No lockfile
 
 Trace: 
-  Error: EACCES: permission denied, open '/Users/apple/Library/Caches/Yarn/.roadrunner.json'
-      at Object.fs.openSync (fs.js:652:18)
-      at Object.fs.writeFileSync (fs.js:1299:33)
-      at /usr/local/lib/node_modules/yarn/node_modules/roadrunner/index.js:25:6
-      at /usr/local/lib/node_modules/yarn/node_modules/roadrunner/index.js:12:12
-      at emitOne (events.js:120:20)
-      at process.emit (events.js:210:7)
-      at processEmit [as emit] (/usr/local/lib/node_modules/yarn/node_modules/signal-exit/index.js:149:35)
-      at process.exit (internal/process.js:158:15)
-      at exit (/usr/local/lib/node_modules/yarn/lib/cli/index.js:431:13)
-      at <anonymous>
+  Error: EACCES: permission denied, mkdir '/Users/apple/Library/Caches/Yarn/npm-babel-6.23.0-d0d1e7d803e974765beea3232d4e153c0efb90f4'
